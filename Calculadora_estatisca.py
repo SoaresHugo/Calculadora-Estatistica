@@ -145,17 +145,17 @@ while fazer_calculo:
                     os.system('cls')
                     nums = input('Digite um número para adicionar a sua lista: ')
                     nums_float = float(nums)
-                    lista_desvp.append(nums_float)    
+                    lista_variancia.append(nums_float)    
                 except:
                     os.system('cls')
                     print('Digite um número')
             elif adicionar_vl_vv == 'vl':
                 os.system('cls')
-                print(lista_desvp)
+                print(lista_variancia)
             elif adicionar_vl_vv == 'vv':
                 # Usei o mesmo método do desvio padrão pois a variancia é o desvio padrão ao quadrado
-                media_para_desvp = sum(lista_desvp)/len(lista_desvp) 
-                diff_media = [(media_para_desvp - x)**2 for x in lista_desvp]
+                media_para_desvp = sum(lista_variancia)/len(lista_variancia) 
+                diff_media = [(media_para_desvp - x)**2 for x in lista_variancia]
                 desv_p = math.sqrt(sum(diff_media)/len(diff_media))
                 # Coloquei em uma variavel o desvio padrão ao quadrado
                 var = desv_p ** 2
